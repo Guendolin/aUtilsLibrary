@@ -2,7 +2,6 @@
 
 public static class Vector2Extensions
 {
-
     /// <summary>
     /// Returns true  if values is within the x (inclusive) and y (exlusive) otherwise false
     /// </summary>
