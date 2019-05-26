@@ -6,11 +6,11 @@ namespace aSystem.aUtilsLibrary
 
     public abstract class AnimatedValue<T>
     {
-        protected AnimationCurve _cruve = GetNormalizedCurve(AnimatedFloatTypes.EaseInOut);
-        protected float _animationTime = 1f;
-        protected float _startTime;
-        protected T _start;
-        protected T _target;
+        [System.NonSerialized] protected AnimationCurve _cruve = GetNormalizedCurve(AnimatedFloatTypes.EaseInOut);
+        [System.NonSerialized] protected float _animationTime = 1f;
+        [System.NonSerialized] protected float _startTime;
+        [System.NonSerialized] protected T _start;
+        [System.NonSerialized] protected T _target;
 
         public void SetAnimation(AnimatedFloatTypes type = AnimatedFloatTypes.EaseInOut, float animationTime = 1f)
         {
