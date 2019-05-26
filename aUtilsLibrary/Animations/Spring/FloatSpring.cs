@@ -3,24 +3,24 @@
 namespace aSystem.aUtilsLibrary
 {
     [System.Serializable]
-    public class Vector2Spring : Spring<Vector2>
+    public class FloatSpring : Spring<float>
     {
         public override void Reset()
         {
             value = target;
-            velocity = Vector2.zero;
+            velocity = 0f;
         }
 
-        public override Vector2 Update(float deltaTime)
+        public override float Update(float deltaTime)
         {
-            Vector2 toTarget = target - value;
+            float toTarget = target - value;
 
             velocity = velocity * (1 - Mathf.Min(1.0f, Time.deltaTime * drag));
             velocity = velocity + toTarget * (strenght * deltaTime);
-   
+
             if (maxSpeed > 0)
             {
-                velocity = Vector2.ClampMagnitude(velocity, maxSpeed);
+                velocity = Mathf.Clamp(velocity, -maxSpeed, maxSpeed);
             }
 
             value = value + velocity * deltaTime;

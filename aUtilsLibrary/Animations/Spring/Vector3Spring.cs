@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace aSystem.aUtilsLibrary.Spring
+namespace aSystem.aUtilsLibrary
 {
     [System.Serializable]
     public class Vector3Spring : Spring<Vector3>
