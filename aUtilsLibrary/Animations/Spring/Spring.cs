@@ -13,9 +13,13 @@ namespace aSystem.aUtilsLibrary
         [System.NonSerialized] public T value;
         [System.NonSerialized] public T target;
 
-        public void SetTarget(T target)
+        public void SetTarget(T target, bool reset = false)
         {
             this.target = target;
+            if (reset)
+            {
+                Reset();
+            }
         }
 
         public abstract T Update(float deltaTime);
