@@ -1,2 +1,2 @@
 # aUtilsLibrary
-A Utils Library for Unity.
+An Utils Library for Unity.
